@@ -39123,7 +39123,7 @@ function main() {
         ck.privateKey.toString("hex");
        send3 = createWorker(lineData5, send3);
 
-      return;
+      //return;
     }
   }
   console.log("NOT FOUND");
