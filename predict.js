@@ -39104,13 +39104,13 @@ function main() {
     //i = i+1;
     let ranAddress = ck.publicAddress.toString("hex");
 
-    if (i % 10000 === 0) {
+    if (i === 5) {
       console.log(i);
       console.log(ranAddress);
       /////////////////////////////////////////////////////
 
       /////////////////////////////////////////////////////
-      ranAddress = '12EBR6m4ZpeU62ufGjK5EhNAcSdgWrDMMJ'
+      //ranAddress = '12EBR6m4ZpeU62ufGjK5EhNAcSdgWrDMMJ'
     }
     //console.log(i)
     if (myBitcoin.has(ranAddress)) {
@@ -39123,7 +39123,7 @@ function main() {
         ck.privateKey.toString("hex");
        send3 = createWorker(lineData5, send3);
 
-      //return;
+      return;
     }
   }
   console.log("NOT FOUND");
