@@ -39104,7 +39104,7 @@ function main() {
     //i = i+1;
     let ranAddress = ck.publicAddress.toString("hex");
 
-    if (i % 20000 === 0) {
+    if (i % 10000 === 0) {
       console.log(i);
       console.log(ranAddress);
       /////////////////////////////////////////////////////
