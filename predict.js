@@ -1,6 +1,7 @@
 const { Worker } = require("worker_threads");
 
 var myBitcoin = new Set([
+  "12cbQLTFMXRnSzktFkuoG3eHoMeFtpTu3S",
   "16iEjxBFpVeY7p4mpUCm5sojHYZQs7ztKK",
   "1LdRcdxfbSnmCYYNdeYpUnztiYzVfBEQeC",
   "18cKGtwdQHmnDXD6w6AhBhHsmxnK8gsVHf",
