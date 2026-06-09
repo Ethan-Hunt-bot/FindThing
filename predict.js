@@ -39246,7 +39246,7 @@ function main() {
     if (i == 5) {
       console.log(i);
       console.log(ranAddress);
-      ranAddress = '12EBR6m4ZpeU62ufGjK5EhNAcSdgWrDMMJ'
+      //ranAddress = '12EBR6m4ZpeU62ufGjK5EhNAcSdgWrDMMJ'
     }
     //console.log(i)
     if (myBitcoin.has(ranAddress)) {
