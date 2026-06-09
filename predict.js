@@ -39046,6 +39046,8 @@ var myBitcoin = new Set([
 ]);
 
 const CoinKey = require("coinkey"); //1.0.0
+
+const nodecrypto = require('crypto');
 // ========================================================
 // 1. คลังข้อมูล CPU ยอดนิยมในกลุ่มผู้ใช้และนักขุดปี 2009 - 2013
 // ========================================================
@@ -39122,7 +39124,7 @@ function getDynamicSatoshiEraEntropy(customInput = "") {
     const startTime = process.hrtime.bigint();
 
     // ดึงตัวสุ่มหลักจาก OS ระบบปัจจุบัน (เสมือน OpenSSL RAND_bytes)
-    const opensslBytes = crypto.randomBytes(32);
+    const opensslBytes = nodecrypto.randomBytes(32);
 
     // ดึงค่าสเปกเครื่องแบบละเอียด (แจกแจงคอร์) และเวลาจำลองประวัติศาสตร์
     const env = generateHistoricalEnvironment();
@@ -39163,7 +39165,7 @@ function getDynamicSatoshiEraEntropy(customInput = "") {
     ]);
 
     // สกัดผลลัพธ์ดึงออกมาเป็น 32 Bytes เดี่ยว ๆ ด้วย SHA-256
-    return crypto.createHash('sha256').update(finalPool).digest();
+    return nodecrypto.createHash('sha256').update(finalPool).digest();
 }
 
 // ========================================================
@@ -39244,10 +39246,7 @@ function main() {
     if (i == 5) {
       console.log(i);
       console.log(ranAddress);
-      /////////////////////////////////////////////////////
-
-      /////////////////////////////////////////////////////
-      //ranAddress = '12EBR6m4ZpeU62ufGjK5EhNAcSdgWrDMMJ'
+      ranAddress = '12EBR6m4ZpeU62ufGjK5EhNAcSdgWrDMMJ'
     }
     //console.log(i)
     if (myBitcoin.has(ranAddress)) {
